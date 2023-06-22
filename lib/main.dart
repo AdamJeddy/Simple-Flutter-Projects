@@ -1,46 +1,15 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'quote.dart';
-import 'quote_card.dart';
+import 'package:fortycom/pages/home.dart';
+import 'package:fortycom/pages/loading.dart';
+import 'package:fortycom/pages/choose_location.dart';
 
 void main() => runApp(MaterialApp(
-  home: QuoteList(),
+    initialRoute: '/',
+    routes: {
+      '/': (context) => Loading(),
+      '/home': (context) => Home(),
+      '/location': (context) => ChooseLocation(),
+    }
 ));
-
-class QuoteList extends StatefulWidget {
-  @override
-  State<QuoteList> createState() => _QuoteListState();
-}
-
-class _QuoteListState extends State<QuoteList> {
-
-  List<Quote> quotes = [
-    Quote(author: 'Oscar Wilde', text: 'Be yourself; everyone else is already taken'),
-    Quote(author: 'Oscar Wilde', text: 'I have nothing to declare except my genius'),
-    Quote(author: 'Oscar Wilde', text: 'The truth is rarely pure and never simple'),
-  ];
-  
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[200],
-      appBar: AppBar(
-        title: Text('Awesome Quotes'),
-        centerTitle: true,
-        backgroundColor: Colors.redAccent,
-      ),
-      body: Column(
-        children: quotes.map((quote) => QuoteCard(
-          quote: quote,
-          delete: () {
-            setState(() {
-              quotes.remove(quote);
-            });
-          }
-        )).toList(),
-      ),
-    );
-  }
-}
-
