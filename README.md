@@ -1,8 +1,14 @@
-# fortycom
+# Simple Flutter projects
+This repository consists of 4 simple projects in flutter, each project in its own branch
 
-A new Flutter project.
+## Projects
+- Profile Page
+- Profile Page Stateful
+- Quote Card
+- Simple-Weather-App
 
-## Getting Started
+
+## Other
 
 This project is a starting point for a Flutter application.
 
