@@ -1,4 +1,4 @@
-# Simple Flutter projects
+# Simple Weather App 
 This repository consists of 4 simple projects in flutter, each project in its own branch
 
 ## Projects
